@@ -23,7 +23,7 @@ def main():
 
     response = client.public_ip_addresses.begin_create_or_update(
         resource_group_name="lab4",
-        public_ip_address_name="ipv4a",
+        public_ip_address_name="ipv4",
         parameters={
             "location": "uksouth",
             "properties": {
