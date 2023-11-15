@@ -1,0 +1,14 @@
+PUT https://management.azure.com/subscriptions/bb4f2673-5471-4327-a067-1715eb7145c3/resourceGroups/lab4/providers/Microsoft.Network/publicIPAddresses/ipv4?api-version=2023-05-01
+
+{
+  "properties": {
+    "publicIPAllocationMethod": "Static",
+    "idleTimeoutInMinutes": 10,
+    "publicIPAddressVersion": "IPv4"
+  },
+  "sku": {
+    "name": "Standard",
+    "tier": "Global"
+  },
+  "location": "eastus"
+}
