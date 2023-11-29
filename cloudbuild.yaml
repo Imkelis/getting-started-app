@@ -1,3 +1,12 @@
 steps:
-  - name: 'ignasmerk/getting-started'
-    args: ['build', 'commands', 'here']
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'europe-west2-docker.pkg.dev/fabled-sorter-399614/cloud-run-source-deploy/my-python-app', '.']
+    # args: ['build', '-t', 'gcr.io/fabled-sorter-399614/my-python-app', '.']
+
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'europe-west2-docker.pkg.dev/fabled-sorter-399614/cloud-run-source-deploy/my-python-app']
+    # args: ['push', 'gcr.io/fabled-sorter-399614/my-python-app']
+
+images:
+  - 'europe-west2-docker.pkg.dev/fabled-sorter-399614/cloud-run-source-deploy/my-python-app'
+  # - 'gcr.io/fabled-sorter-399614/my-python-app'
