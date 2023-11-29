@@ -12,7 +12,7 @@ nav_links = '''
 @app.route("/")
 def hello2():
     image_url = url_for('static', filename='image1.png')
-    return f"<body style='background-color: #D15830;'><h1 style='color: blue;'>Say Hello Mark from Dockerised Flask</h1><img src='{image_url}'/>" + nav_links + "</body>"
+    return f"<body style='background-color: #D15830;'><h1 style='color: blue;'>Say Hello Ignas from Dockerised Flask</h1><img src='{image_url}'/>" + nav_links + "</body>"
 
 @app.route("/route32a")
 def route32a():
