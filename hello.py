@@ -11,12 +11,12 @@ nav_links = '''
 
 @app.route("/")
 def hello2():
-    image_url = url_for('images', filename='image1.png')
+    image_url = url_for('static', filename='image1.png')
     return f"<h1 style='color: blue;'>Say Hello Ignas from Dockerised Flask</h1><img src='{image_url}'/>" + nav_links
 
 @app.route("/route32a")
 def route32a():
-    image_url = url_for('images', filename='image2.png')
+    image_url = url_for('static', filename='image2.png')
     return f"<h2 style='color: green;'>Hello from the 32A</h2><img src='{image_url}'/>" + nav_links
 
 @app.route("/route")
@@ -27,7 +27,7 @@ def route():
 
 @app.route("/cc")
 def cc():
-    image_url = url_for('images', filename='image4.png')
+    image_url = url_for('static', filename='image4.png')
     return f"<h2 style='background-color: yellow;'>Hello Cloud Computing, this is a Dockerised Flask</h2><img src='{image_url}'/>" + nav_links
 
 if __name__ == "__main__":
