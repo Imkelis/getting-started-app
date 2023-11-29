@@ -1,3 +1,9 @@
 steps:
-  - name: 'ignasmerk/getting-started'
-    args: ['build', 'commands', 'here']
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'gcr.io/fabled-sorter-399614/my-python-app', '.']
+
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'gcr.io/fabled-sorter-399614/my-python-app']
+
+images:
+  - 'gcr.io/fabled-sorter-399614/my-python-app'
