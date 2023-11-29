@@ -1,0 +1,3 @@
+steps:
+  - name: 'ignasmerk/getting-started'
+    args: ['build', 'commands', 'here']
